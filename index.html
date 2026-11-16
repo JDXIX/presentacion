@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RosaScan — Calidad a primera vista</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="deck-viewport">
+    <main class="slides-stage" id="stage" aria-live="polite">
+
+      <!-- DIAPOSITIVA 1: PORTADA -->
+      <section class="slide slide-cover active" data-slide="1">
+        <div class="cover-left">
+          <span class="cover-badge">PITCH · ROSAS INNOVA HACK 2026</span>
+          <div>
+            <h1 class="cover-brand">Rosa<span>Scan</span></h1>
+            <p class="cover-slogan">Calidad a primera vista.</p>
+            <p class="cover-desc">Inspección inteligente de rosas en poscosecha.</p>
+          </div>
+          <div class="cover-team">
+            <p class="cover-team-names">Jordy Quimbita · Marlon Chacón · Danilo Tapia · David Toro · Lisbeth Yupangui</p>
+            <p class="cover-uni">UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE</p>
+          </div>
+        </div>
+        <div class="cover-right">
+          <img src="assets/rose_cover.jpg" alt="Rosa roja de exportación" />
+          <div class="cover-right-overlay"></div>
+        </div>
+      </section>
+
+      <!-- DIAPOSITIVA 2: LA OPORTUNIDAD -->
+      <section class="slide" data-slide="2">
+        <header class="slide-header">
+          <span class="eyebrow">La oportunidad</span>
+          <h2 class="slide-title">Cada detalle cuenta antes de exportar.</h2>
+          <p class="slide-subtitle">La clasificación considera características visibles de la rosa completa.</p>
+        </header>
+
+        <div class="opp-grid">
+          <div class="opp-visual-card">
+            <div class="opp-photo-wrap">
+              <img src="assets/rosa_tallo_recto.png" alt="Rosa completa con tallo, hojas y botón floral" />
+              <svg class="opp-svg-overlay" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet">
+                <!-- Apertura del botón -->
+                <circle cx="115" cy="225" r="72" fill="none" stroke="#C43458" stroke-width="3" stroke-dasharray="6 4"/>
+                <rect x="48" y="112" width="134" height="28" rx="6" fill="#C43458"/>
+                <text x="115" y="131" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">APERTURA</text>
+                <!-- Rectitud del tallo -->
+                <line x1="200" y1="228" x2="740" y2="228" stroke="#1B5E4B" stroke-width="3" stroke-dasharray="8 5"/>
+                <rect x="420" y="182" width="120" height="28" rx="6" fill="#1B5E4B"/>
+                <text x="480" y="201" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">RECTITUD</text>
+                <!-- Longitud -->
+                <line x1="60" y1="335" x2="745" y2="335" stroke="#103B30" stroke-width="3"/>
+                <line x1="60" y1="322" x2="60" y2="348" stroke="#103B30" stroke-width="3"/>
+                <line x1="745" y1="322" x2="745" y2="348" stroke="#103B30" stroke-width="3"/>
+                <rect x="330" y="346" width="145" height="28" rx="6" fill="#103B30"/>
+                <text x="402" y="365" fill="#FFFFFF" font-size="13" font-weight="800" text-anchor="middle">LONGITUD DEL TALLO</text>
+              </svg>
+            </div>
+            <div class="opp-criteria-row">
+              <div class="opp-pill"><span class="dot-green"></span> Longitud</div>
+              <div class="opp-pill"><span class="dot-green"></span> Rectitud</div>
+              <div class="opp-pill"><span class="dot-rose"></span> Apertura</div>
+            </div>
+          </div>
+          <aside class="opp-question-card">
+            <h3>¿Y si pudiéramos verificarlas en una sola revisión?</h3>
+            <div class="opp-divider"></div>
+            <p>Oportunidad de mejora en poscosecha</p>
+          </aside>
+        </div>
+
+        <footer class="slide-footer">
+          <span>ROSASCAN · ROSAS INNOVA HACK 2026</span>
+          <span>02 / 09</span>
+        </footer>
+      </section>
+
+      <!-- DIAPOSITIVA 3: LA SOLUCIÓN (ÚNICO LUGAR DEL RENDER CONCEPTUAL) -->
+      <section class="slide" data-slide="3">
+        <header class="slide-header">
+          <span class="eyebrow">La solución</span>
+          <h2 class="slide-title">Una cámara. Tres verificaciones.</h2>
+          <p class="slide-subtitle">Haz clic en cada criterio para destacar su zona de inspección.</p>
+        </header>
+
+        <div class="sol-grid">
+          <div class="sol-render-card">
+            <img src="assets/RosaScan_Conceptual_UNICAMENTE_SLIDE_3.png" alt="Visualización conceptual de RosaScan en estación de poscosecha" />
+            <svg class="sol-svg-overlay" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+              <!-- Zona Longitud -->
+              <g id="solZoneLength" class="sol-zone">
+                <line x1="85" y1="395" x2="465" y2="385" stroke="#103B30" stroke-width="5"/>
+                <line x1="85" y1="380" x2="85" y2="410" stroke="#103B30" stroke-width="5"/>
+                <line x1="465" y1="370" x2="465" y2="400" stroke="#103B30" stroke-width="5"/>
+                <rect x="200" y="405" width="160" height="32" rx="8" fill="#103B30"/>
+                <text x="280" y="426" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">LONGITUD DEL TALLO</text>
+              </g>
+              <!-- Zona Rectitud -->
+              <g id="solZoneStraight" class="sol-zone">
+                <line x1="175" y1="348" x2="460" y2="338" stroke="#1B5E4B" stroke-width="5" stroke-dasharray="10 6"/>
+                <rect x="240" y="292" width="160" height="32" rx="8" fill="#1B5E4B"/>
+                <text x="320" y="313" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">RECTITUD VISIBLE</text>
+              </g>
+              <!-- Zona Apertura -->
+              <g id="solZoneOpening" class="sol-zone">
+                <circle cx="132" cy="345" r="56" fill="rgba(196, 52, 88, 0.14)" stroke="#C43458" stroke-width="4"/>
+                <rect x="52" y="254" width="160" height="32" rx="8" fill="#C43458"/>
+                <text x="132" y="275" fill="#FFFFFF" font-size="14" font-weight="800" text-anchor="middle">APERTURA DEL BOTÓN</text>
+              </g>
+            </svg>
+            <span class="concept-badge">Visualización conceptual. Prototipo no construido.</span>
+          </div>
+          <div class="sol-items">
+            <button type="button" class="sol-item active-sol" data-sol="length">
+              <span class="sol-num">01</span>
+              <div>
+                <h4>LONGITUD</h4>
+                <p>del tallo</p>
+              </div>
+            </button>
+            <button type="button" class="sol-item" data-sol="straight">
+              <span class="sol-num">02</span>
+              <div>
+                <h4>RECTITUD</h4>
+                <p>visible</p>
+              </div>
+            </button>
+            <button type="button" class="sol-item rose" data-sol="opening">
+              <span class="sol-num">03</span>
+              <div>
+                <h4>APERTURA</h4>
+                <p>del botón floral</p>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <footer class="slide-footer">
+          <span>ROSASCAN · ROSAS INNOVA HACK 2026</span>
+          <span>03 / 09</span>
+        </footer>
+      </section>
+
+      <!-- DIAPOSITIVA 4: EL PROTOTIPO -->
+      <section class="slide" data-slide="4">
+        <header class="slide-header">
+          <span class="eyebrow">El prototipo</span>
+          <h2 class="slide-title">Se integra a una mesa de trabajo.</h2>
+          <p class="slide-subtitle">Una estación sencilla que acompaña al operario.</p>
+        </header>
+
+        <div class="proto-grid">
+          <div class="proto-diagram-card">
+            <svg viewBox="0 0 560 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Esquema de estación de mesa RosaScan">
+              <rect x="30" y="235" width="500" height="18" rx="6" fill="#103B30"/>
+              <rect x="65" y="253" width="16" height="50" rx="4" fill="#1B5E4B"/>
+              <rect x="479" y="253" width="16" height="50" rx="4" fill="#1B5E4B"/>
+              <rect x="55" y="205" width="260" height="28" rx="6" fill="#CFE9DC" stroke="#103B30" stroke-width="2"/>
+              <line x1="75" y1="224" x2="295" y2="224" stroke="#103B30" stroke-width="2" stroke-dasharray="6 4"/>
+              <line x1="90" y1="215" x2="255" y2="215" stroke="#1B5E4B" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="265" cy="215" r="10" fill="#C43458"/>
+              <path d="M90 235 L90 70 L185 70" stroke="#103B30" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="170" y="54" width="48" height="32" rx="8" fill="#103B30"/>
+              <circle cx="194" cy="70" r="8" fill="#CFE9DC"/>
+              <path d="M194 86 L125 205 M194 86 L265 205" stroke="#C43458" stroke-width="1.5" stroke-dasharray="5 5"/>
+              <rect x="355" y="120" width="150" height="96" rx="8" fill="#103B30"/>
+              <rect x="364" y="129" width="132" height="78" rx="4" fill="#F7F6F0"/>
+              <rect x="415" y="216" width="30" height="19" fill="#1B5E4B"/>
+              <rect x="392" y="231" width="76" height="5" rx="2" fill="#103B30"/>
+              <rect x="376" y="144" width="60" height="10" rx="3" fill="#CFE9DC"/>
+              <rect x="376" y="162" width="108" height="8" rx="3" fill="#103B30" opacity="0.2"/>
+              <rect x="376" y="178" width="90" height="14" rx="4" fill="#1B5E4B"/>
+              <!-- Indicadores numerados -->
+              <circle cx="194" cy="34" r="14" fill="#C43458"/>
+              <text x="194" y="39" fill="#FFFFFF" font-size="12" font-weight="800" text-anchor="middle">01</text>
+              <circle cx="185" cy="182" r="14" fill="#103B30"/>
+              <text x="185" y="187" fill="#FFFFFF" font-size="12" font-weight="800" text-anchor="middle">02</text>
+              <circle cx="430" cy="98" r="14" fill="#103B30"/>
+              <text x="430" y="103" fill="#FFFFFF" font-size="12" font-weight="800" text-anchor="middle">03</text>
+            </svg>
+          </div>
+          <div class="proto-list">
+            <div class="proto-card">
+              <div class="proto-num">01</div>
+              <div>
+                <h4>Cámara Full HD</h4>
+                <p>Situada sobre la superficie de inspección.</p>
+              </div>
+            </div>
+            <div class="proto-card highlight">
+              <div class="proto-num">02</div>
+              <div>
+                <h4>Zona de inspección</h4>
+                <p>Rosa completa y referencia de longitud.</p>
+              </div>
+            </div>
+            <div class="proto-card">
+              <div class="proto-num">03</div>
+              <div>
+                <h4>Computadora y pantalla</h4>
+                <p>Presenta los resultados en el mismo puesto.</p>
+              </div>
+            </div>
+            <div class="proto-note">Una estación sencilla que acompaña al operario.</div>
+          </div>
+        </div>
+
+        <footer class="slide-footer">
+          <span>ROSASCAN · ROSAS INNOVA HACK 2026</span>
+          <span>04 / 09</span>
+        </footer>
+      </section>
+
+      <!-- DIAPOSITIVA 5: DEMOSTRACIÓN ANIMADA DE ROSASCAN -->
+      <section class="slide" data-slide="5">
+        <header class="slide-header">
+          <span class="eyebrow">Funcionamiento</span>
+          <h2 class="slide-title">Demostración del proceso en estación.</h2>
+        </header>
+
+        <div class="demo-stage-layout">
+          <div class="demo-scene-wrap">
+            <img class="demo-scene-img" src="assets/escena_operaria_rosascan.png" alt="Trabajadora de poscosecha utilizando RosaScan" />
+
+            <svg class="demo-svg-layer" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice">
+              <!-- Paso 1: Zona de inspección -->
+              <g id="demoStep1Svg" class="demo-overlay-group show">
+                <rect x="330" y="455" width="460" height="145" rx="16" fill="rgba(207, 233, 220, 0.18)" stroke="#CFE9DC" stroke-width="4" stroke-dasharray="10 6"/>
+              </g>
+              <!-- Paso 2: Cámara y área de captura -->
+              <g id="demoStep2Svg" class="demo-overlay-group">
+                <circle cx="628" cy="306" r="46" fill="rgba(196, 52, 88, 0.16)" stroke="#C43458" stroke-width="4"/>
+                <polygon points="628,348 360,565 770,565" fill="rgba(207, 233, 220, 0.14)" stroke="#CFE9DC" stroke-width="2.5" stroke-dasharray="8 6"/>
+              </g>
+              <!-- Paso 3: Tres verificaciones sobre la rosa -->
+              <g id="demoStep3Svg" class="demo-overlay-group">
+                <!-- Apertura -->
+                <circle cx="412" cy="522" r="44" fill="none" stroke="#C43458" stroke-width="4"/>
+                <!-- Rectitud -->
+                <line x1="455" y1="522" x2="755" y2="516" stroke="#1B5E4B" stroke-width="4" stroke-dasharray="8 5"/>
+                <!-- Longitud -->
+                <line x1="370" y1="572" x2="765" y2="564" stroke="#103B30" stroke-width="4"/>
+              </g>
+              <!-- Paso 5: Decisión humana -->
+              <g id="demoStep5Svg" class="demo-overlay-group">
+                <circle cx="215" cy="240" r="125" fill="none" stroke="#CFE9DC" stroke-width="4" stroke-dasharray="8 6"/>
+              </g>
+            </svg>
+
+            <!-- Paso 4: Capa en la pantalla de la laptop -->
+            <div class="demo-laptop-screen" id="demoLaptopOverlay">
+              <strong>RosaScan · Resultado</strong>
+              <span class="demo-laptop-badge">INSPECCIÓN FINALIZADA · SIN ALERTAS</span>
+            </div>
+
+            <!-- Panel del paso activo -->
+            <div class="demo-step-panel">
+              <div class="demo-step-kicker" id="demoStepKicker">01 · PRESENTAR</div>
+              <div class="demo-step-text" id="demoStepText">El operario coloca la rosa</div>
+              <div class="demo-human-badge" id="demoHumanBadge">LA DECISIÓN FINAL ES HUMANA.</div>
+            </div>
+
+            <span class="demo-concept-tag">Demostración conceptual</span>
+          </div>
+
+          <div class="demo-controls-bar">
+            <div class="demo-btn-group">
+              <button class="demo-btn primary" id="demoPlayBtn" type="button">▶ Reproducir demostración</button>
+              <button class="demo-btn" id="demoPauseBtn" type="button">⏸ Pausar</button>
+              <button class="demo-btn" id="demoResetBtn" type="button">↺ Reiniciar</button>
+              <button class="demo-btn" id="demoPrevBtn" type="button">← Paso anterior</button>
+              <button class="demo-btn" id="demoNextBtn" type="button">Siguiente paso →</button>
+            </div>
+            <div class="demo-dots" id="demoDots">
+              <span class="demo-dot active"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+              <span class="demo-dot"></span>
+            </div>
+          </div>
+        </div>
+
+        <footer class="slide-footer">
+          <span>ROSASCAN · ROSAS INNOVA HACK 2026</span>
+          <span>05 / 09</span>
+        </footer>
+      </section>
+
+      <!-- DIAPOSITIVA 6: SIMULADOR INTERACTIVO DE LA PANTALLA ROSASCAN -->
+      <section class="slide" data-slide="6">
+        <header class="slide-header">
+          <span class="eyebrow">Lo que ve el operario</span>
+          <h2 class="slide-title">Una pantalla que se entiende al instante.</h2>
+        </header>
+
+        <div class="sim-app-shell">
+          <div class="sim-window">
+            <div class="sim-topbar">
+              <div class="sim-topbar-left">
+                <strong>RosaScan</strong>
+                <span>Inspección visual</span>
+              </div>
+              <span class="sim-concept-note">Simulación conceptual · Valores ilustrativos</span>
+            </div>
+
+            <div class="sim-main">
+              <div class="sim-camera-box">
+                <img id="simRoseImg" src="assets/rosa_tallo_recto.png" alt="Rosa en estación de inspección" />
+                <div class="sim-scan-line" id="simScanLine"></div>
+                <svg class="sim-svg-overlay" id="simSvgOverlay" viewBox="0 0 800 450" preserveAspectRatio="xMidYMid meet">
+                  <circle cx="115" cy="225" r="68" fill="none" stroke="#C43458" stroke-width="3.5"/>
+                  <line x1="190" y1="228" x2="740" y2="228" stroke="#1B5E4B" stroke-width="3.5" stroke-dasharray="8 5"/>
+                  <line x1="60" y1="335" x2="745" y2="335" stroke="#103B30" stroke-width="3"/>
+                </svg>
+                <span class="sim-cam-tag" id="simCamTag">RosaScan · Estación de inspección</span>
+              </div>
+
+              <div class="sim-results-col">
+                <div class="sim-metric-card">
+                  <span>LONGITUD</span>
+                  <strong id="simValLength">—</strong>
+                </div>
+                <div class="sim-metric-card">
+                  <span>RECTITUD</span>
+                  <strong id="simValStraight">—</strong>
+                </div>
+                <div class="sim-metric-card">
+                  <span>APERTURA</span>
+                  <strong id="simValOpening">—</strong>
+                </div>
+                <div class="sim-status-box idle" id="simStatusBox">
+                  <strong id="simStatusTitle">LISTO PARA INSPECCIÓN</strong>
+                  <p id="simStatusMsg">Selecciona un ejemplo y presiona Iniciar inspección.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="sim-bottom-bar">
+              <div class="sim-example-tabs">
+                <button class="sim-tab-btn active" id="simTabA" type="button">Ejemplo A — Rosa recta</button>
+                <button class="sim-tab-btn" id="simTabB" type="button">Ejemplo B — Rosa con curvatura</button>
+              </div>
+              <button class="sim-run-btn" id="simRunBtn" type="button">INICIAR INSPECCIÓN</button>
+            </div>
+          </div>
+        </div>
+
+        <footer class="slide-footer">
+          <span>ROSASCAN · ROSAS INNOVA HACK 2026</span>
+          <span>06 / 09</span>
+        </footer>
+      </section>
+
+      <!-- DIAPOSITIVA 7: SCAMPER -->
+      <section class="slide" data-slide="7">
+        <header class="slide-header">
+          <span class="eyebrow">SCAMPER</span>
+          <h2 class="slide-title">Innovar también es simplificar.</h2>
+        </header>
+
+        <div class="scamper-hub-layout">
+          <div class="scamper-center-pill">Inspección visual asistida</div>
+          <div class="scamper-row-top">
+            <div class="scamper-card accent">
+              <div class="scamper-head"><span class="scamper-letter">S</span><h4>SUSTITUIR</h4></div>
+              <p>Apoyar las revisiones repetitivas.</p>
+            </div>
+            <div class="scamper-card">
+              <div class="scamper-head"><span class="scamper-letter">C</span><h4>COMBINAR</h4></div>
+              <p>Tres controles en una estación.</p>
+            </div>
+            <div class="scamper-card">
+              <div class="scamper-head"><span class="scamper-letter">A</span><h4>ADAPTAR</h4></div>
+              <p>Criterios según el comprador.</p>
+            </div>
+            <div class="scamper-card">
+              <div class="scamper-head"><span class="scamper-letter">M</span><h4>MODIFICAR</h4></div>
+              <p>Alertas visuales sencillas.</p>
+            </div>
+          </div>
+          <div class="scamper-row-bot">
+            <div class="scamper-card">
+              <div class="scamper-head"><span class="scamper-letter">P</span><h4>OTROS USOS</h4></div>
+              <p>Aprender de las inspecciones.</p>
+            </div>
+            <div class="scamper-card">
+              <div class="scamper-head"><span class="scamper-letter">E</span><h4>ELIMINAR</h4></div>
+              <p>Equipos y pasos innecesarios.</p>
+            </div>
+            <div class="scamper-card">
+              <div class="scamper-head"><span class="scamper-letter">R</span><h4>REORGANIZAR</h4></div>
+              <p>Revisar antes de agrupar.</p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="slide-footer">
+          <span>ROSASCAN · ROSAS INNOVA HACK 2026</span>
+          <span>07 / 09</span>
+        </footer>
+      </section>
+
+      <!-- DIAPOSITIVA 8: PRESUPUESTO -->
+      <section class="slide" data-slide="8">
+        <header class="slide-header">
+          <span class="eyebrow">Presupuesto</span>
+          <h2 class="slide-title">Una estación piloto, con inversión controlada.</h2>
+          <p class="slide-subtitle">Una prueba piloto pequeña antes de invertir en una solución mayor.</p>
+        </header>
+
+        <div class="budget-grid">
+          <aside class="budget-summary-card">
+            <div>
+              <p class="budget-total-label">Subtotal referencial de materiales para una estación piloto</p>
+              <p class="budget-total-num">USD 153,37</p>
+            </div>
+            <div class="budget-scope-note">
+              No incluye computadora, desarrollo, instalación ni pruebas; tampoco envío o importación cuando corresponda.
+            </div>
+          </aside>
+
+          <div class="budget-table-col">
+            <div class="budget-row">
+              <div class="budget-item-left">
+                <div class="budget-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+                <strong>Cámara Full HD</strong>
+              </div>
+              <div class="budget-price">USD 85,93</div>
+            </div>
+            <div class="budget-row">
+              <div class="budget-item-left">
+                <div class="budget-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/></svg></div>
+                <strong>Iluminación LED</strong>
+              </div>
+              <div class="budget-price">USD 20,00</div>
+            </div>
+            <div class="budget-row">
+              <div class="budget-item-left">
+                <div class="budget-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20h16M6 20V8l8-4 4 4"/></svg></div>
+                <strong>Brazo articulado</strong>
+              </div>
+              <div class="budget-price">USD 41,69</div>
+            </div>
+            <div class="budget-row">
+              <div class="budget-item-left">
+                <div class="budget-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="8" width="20" height="8" rx="1"/><line x1="6" y1="8" x2="6" y2="12"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="18" y1="8" x2="18" y2="12"/></svg></div>
+                <strong>Regla de referencia</strong>
+              </div>
+              <div class="budget-price">USD 4,70</div>
+            </div>
+            <div class="budget-row">
+              <div class="budget-item-left">
+                <div class="budget-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/></svg></div>
+                <strong>Fondo blanco</strong>
+              </div>
+              <div class="budget-price">USD 1,05</div>
+            </div>
+            <div class="budget-reuse">Computadora y pantalla: reutilización por confirmar.</div>
+          </div>
+        </div>
+
+        <footer class="slide-footer">
+          <span>ROSASCAN · ROSAS INNOVA HACK 2026</span>
+          <span>08 / 09</span>
+        </footer>
+      </section>
+
+      <!-- DIAPOSITIVA 9: CIERRE -->
+      <section class="slide slide-closing" data-slide="9">
+        <div class="closing-left">
+          <span class="cover-badge">ROSASCAN · PROPUESTA DE PILOTO</span>
+          <h2 class="closing-title">
+            La calidad no se improvisa.
+            <span>Se verifica.</span>
+          </h2>
+          <div class="closing-pillars">
+            <span class="closing-pillar">PRUEBA</span>
+            <span class="closing-pillar">MEDICIÓN</span>
+            <span class="closing-pillar">DECISIÓN</span>
+          </div>
+          <div class="closing-steps">
+            <p>Probar en una estación.</p>
+            <p>Medir si aporta valor.</p>
+            <p>Escalar solo si funciona.</p>
+          </div>
+          <div class="closing-brand">RosaScan | Calidad a primera vista.</div>
+        </div>
+        <div class="closing-right">
+          <img src="assets/rose_closing.jpg" alt="Rosa roja de exportación" />
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <nav class="deck-controls" aria-label="Controles de presentación">
+    <button id="prevBtn" type="button" title="Anterior (←)">←</button>
+    <span id="slideCounter">01 / 09</span>
+    <button id="nextBtn" type="button" title="Siguiente (→)">→</button>
+    <button id="fsBtn" type="button" title="Pantalla completa (F)">⛶</button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
