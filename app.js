@@ -210,7 +210,7 @@
     simImg.src = ex === 'A' ? 'assets/rosa_tallo_recto.png' : 'assets/rosa_tallo_curvo.png';
     simScanLine.classList.remove('scanning');
     simSvgOverlay.classList.remove('show');
-    simCamTag.textContent = 'RosaScan · Estación de inspección';
+    simCamTag.textContent = 'Bloomik · Estación de inspección';
     simValLength.textContent = '—';
     simValStraight.textContent = '—';
     simValOpening.textContent = '—';
