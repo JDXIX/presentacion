@@ -108,7 +108,7 @@
     },
     {
       kicker: '05 · CONFIRMAR',
-      text: 'El operario toma la decisión',
+      text: 'El operario toma la decisión final',
       svg: 'demoStep5Svg',
       laptop: true,
       human: true
